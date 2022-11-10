@@ -30,10 +30,8 @@ class Decorator extends AbstractDecorator
     public void draw(Graphics2D g) {
         AffineTransform before = g.getTransform();
         AffineTransform tr=new AffineTransform();
-        /*tr.translate(ZEROX,ZEROY);
-        tr.scale(TILESIZE, TILESIZE);*/
-        tr.translate(23, 7);
-        tr.scale(Piece.TILESIZE, Piece.TILESIZE);
+        tr.translate(ZEROX,ZEROY);
+        tr.scale(TILESIZE, TILESIZE);
         g.transform(tr);
         super.draw(g);
         g.setTransform(before);
